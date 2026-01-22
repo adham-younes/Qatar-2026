@@ -17,10 +17,10 @@ const highlights = [
 ];
 
 const metrics = [
-  { label: 'Active Zones', value: '24' },
-  { label: 'Open Alerts', value: '7' },
-  { label: 'Water Savings', value: '18%' },
-  { label: 'Energy Efficiency', value: '12%' }
+  { label: 'Active Zones', value: '24', trend: '+4 today' },
+  { label: 'Open Alerts', value: '7', trend: '2 critical' },
+  { label: 'Water Savings', value: '18%', trend: 'vs baseline' },
+  { label: 'Energy Efficiency', value: '12%', trend: 'week over week' }
 ];
 
 const workflows = [
@@ -41,6 +41,12 @@ const workflows = [
   }
 ];
 
+const telemetry = [
+  { label: 'Leaf Temp', value: '26.4°C', status: 'Nominal' },
+  { label: 'Substrate EC', value: '2.1 mS', status: 'Stable' },
+  { label: 'Drip Pressure', value: '1.8 bar', status: 'Check' }
+];
+
 export default function HomePage() {
   return (
     <main className="page">
@@ -51,6 +57,7 @@ export default function HomePage() {
             <span>Platform</span>
             <span>Operations</span>
             <span>Pilot Mode</span>
+            <span>OSIRIS</span>
             <button className="pill">Request Demo</button>
           </div>
         </nav>
@@ -75,11 +82,13 @@ export default function HomePage() {
                 <div key={metric.label} className="metric-card">
                   <span>{metric.label}</span>
                   <strong>{metric.value}</strong>
+                  <em>{metric.trend}</em>
                 </div>
               ))}
             </div>
           </div>
           <div className="hero-visual">
+            <div className="grid-overlay" />
             <div className="glow-card">
               <div className="glow-header">
                 <span>Zone 3B</span>
@@ -105,7 +114,24 @@ export default function HomePage() {
                 <span />
               </div>
             </div>
+            <div className="side-panel">
+              <div className="panel-title">
+                <h3>Telemetry Feed</h3>
+                <span className="status-dot" />
+              </div>
+              {telemetry.map((item) => (
+                <div key={item.label} className="telemetry-row">
+                  <div>
+                    <p className="label">{item.label}</p>
+                    <p className="value">{item.value}</p>
+                  </div>
+                  <span className="chip">{item.status}</span>
+                </div>
+              ))}
+            </div>
             <div className="glow-orbit" />
+            <div className="beam beam-left" />
+            <div className="beam beam-right" />
           </div>
         </div>
       </section>
