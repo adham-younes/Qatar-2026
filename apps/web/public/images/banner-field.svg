@@ -1,0 +1,18 @@
+<svg width="900" height="520" viewBox="0 0 900 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="520" rx="40" fill="#0B1411"/>
+  <path d="M0 370C140 320 260 300 380 320C520 350 640 380 900 330V520H0V370Z" fill="#0E231B"/>
+  <path d="M0 320C160 250 300 230 440 250C560 270 720 320 900 280" stroke="#15E78B" stroke-opacity="0.4" stroke-width="6"/>
+  <path d="M0 260C140 200 320 180 480 200C620 220 760 260 900 230" stroke="#2E86FF" stroke-opacity="0.35" stroke-width="4"/>
+  <circle cx="150" cy="150" r="90" fill="url(#sun)"/>
+  <circle cx="710" cy="130" r="60" fill="url(#planet)"/>
+  <defs>
+    <radialGradient id="sun" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(150 150) rotate(90) scale(90)">
+      <stop stop-color="#15E78B" stop-opacity="0.75"/>
+      <stop offset="1" stop-color="#15E78B" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="planet" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(710 130) rotate(90) scale(60)">
+      <stop stop-color="#2E86FF" stop-opacity="0.65"/>
+      <stop offset="1" stop-color="#2E86FF" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+</svg>

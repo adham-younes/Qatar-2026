@@ -98,11 +98,7 @@ body {
   width: min(420px, 80vw);
   height: 420px;
   border-radius: 50%;
-  background:
-    radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.2), transparent 60%),
-    radial-gradient(circle at 70% 20%, rgba(21, 231, 139, 0.4), transparent 55%),
-    radial-gradient(circle at 50% 80%, rgba(46, 134, 255, 0.3), transparent 60%),
-    #0b0b0b;
+  background: url('/images/hero-orb.svg') center/cover no-repeat;
   box-shadow: 0 0 120px rgba(21, 231, 139, 0.3);
 }
 
@@ -120,10 +116,7 @@ body {
 .banner-image {
   height: 280px;
   border-radius: 22px;
-  background:
-    radial-gradient(circle at 30% 40%, rgba(21, 231, 139, 0.4), transparent 60%),
-    radial-gradient(circle at 70% 60%, rgba(46, 134, 255, 0.35), transparent 55%),
-    #0f0f0f;
+  background: url('/images/banner-field.svg') center/cover no-repeat;
 }
 
 .banner-copy h2 {
@@ -150,11 +143,16 @@ body {
   border-radius: 26px;
   min-height: 240px;
   background: linear-gradient(120deg, rgba(21, 231, 139, 0.25), rgba(0, 0, 0, 0.6));
+  background-size: cover;
+  background-position: center;
+}
+
+.card-image--satellite {
+  background-image: url('/images/card-satellite.svg');
 }
 
 .card-image--iot {
-  background: radial-gradient(circle at 30% 30%, rgba(21, 231, 139, 0.5), transparent 60%),
-    #121212;
+  background-image: url('/images/card-iot.svg');
 }
 
 .card-accent {
@@ -213,7 +211,29 @@ body {
 
 .system-image {
   flex: 1;
-  background: linear-gradient(160deg, rgba(21, 231, 139, 0.3), transparent 65%);
+  background-color: #101915;
+  background-size: cover;
+  background-position: center;
+}
+
+.system-card--app .system-image {
+  background-image: url('/images/system-app.svg');
+}
+
+.system-card--weather .system-image {
+  background-image: url('/images/system-weather.svg');
+}
+
+.system-card--soil .system-image {
+  background-image: url('/images/system-soil.svg');
+}
+
+.system-card--disease .system-image {
+  background-image: url('/images/system-disease.svg');
+}
+
+.system-card--irrigation .system-image {
+  background-image: url('/images/system-irrigation.svg');
 }
 
 .system-info {
